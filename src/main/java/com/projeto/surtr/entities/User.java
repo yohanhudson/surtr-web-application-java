@@ -39,4 +39,13 @@ public class User {
         this.birthDate = birthDate;
         this.password = password;
     }
+
+    public User(Long id, String name, String email, String cpf, LocalDate birthDate, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.cpf = cpf;
+        this.birthDate = birthDate;
+        this.password = password;
+    }
 }
