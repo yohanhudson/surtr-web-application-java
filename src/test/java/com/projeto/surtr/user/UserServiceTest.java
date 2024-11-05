@@ -52,4 +52,15 @@ class UserServiceTest {
         userService.register(user);
         Mockito.verify(userRepository).save(Mockito.any(User.class));
     }
+
+    @Test
+    @DisplayName("Delete an object of type User when triggered")
+    void deleteUserWhenTriggered() {
+
+        User user = UserBuilder.createUser();
+        userService.deleteById(user.getId());
+        Mockito.verify(userRepository).deleteById(Mockito.eq(user.getId()));
+    }
+
+
 }
